@@ -1,7 +1,17 @@
 flood-pubsub:
 - keep a peerset, like bitswap
+- use a topic object
+  - token: some randomness (uuid4 is fine)
+  - authentication modes:
+    - any: anyone can publish
+    - key: a list of keys to trust, only messages signed by those keys are accepted
+    - wot: a web of trust, like key, but publishers can add other publishers by signing a certificate
+  - encryption modes:
+    - none: not encrypted
+    - shared key: hash of the key is on topic message. messages are encrypted with the shared key.
+  - the "topic id" is the hash of the topic object
 - use topic subscriptions
-  - just a string, w/o "/"
+  - the "topic id" is the hash of the topic object
   - can subscribe to many topics
 - topic subscriptions advertised to direct peers
   - uses deltas (sub and unsub).
