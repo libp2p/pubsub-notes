@@ -1,0 +1,36 @@
+# now
+ipfs pubsub sub <topic-name>
+ipfs pubsub pub -t <topic-name> <message.payload>
+
+
+# subscribing
+
+> ipfs pubsub sub <topic-name>
+<message.payload><message.payload>...
+
+> ipfs pubsub sub --enc=ndpayload <topic-name>
+<message.payload>\n
+<message.payload>\n
+<message.payload>\n
+
+> ipfs pubsub sub --stdin --enc=lenpayload <topic-name>
+<varint-len><message.payload><varint-len><message.payload>
+
+> ipfs pubsub sub --enc=ndjson <topic-name>
+<message-in-json>\n
+<message-in-json>\n
+<message-in-json>\n
+
+> ipfs pubsub sub --enc=protobuf-stream <topic-name>
+<varint-len><message-in-protobuf><varint-len><message-in-protobuf>...
+
+# publishing
+
+> ipfs pubsub pub <topic-name> <message.payload>
+> ipfs pubsub pub --stdin --enc=ndpayload <topic-name>
+<message.payload>
+<message.payload>
+<message.payload>
+
+> ipfs pubsub pub --stdin --enc=lenpayload <topic-name>
+<varint-len><message.payload><varint-len><message.payload>
