@@ -7,9 +7,9 @@ ipfs pubsub sub <topic-name>
 
 > ipfs pubsub pub <topic-name> <message.payload>
 > ipfs pubsub pub --stdin --enc=ndpayload <topic-name>
-<message.payload>
-<message.payload>
-<message.payload>
+<message.payload>\n
+<message.payload>\n
+<message.payload>\n
 
 > ipfs pubsub pub --stdin --enc=lenpayload <topic-name>
 <varint-len><message.payload><varint-len><message.payload>
