@@ -1,6 +1,18 @@
 # now
-ipfs pubsub sub <topic-name>
 ipfs pubsub pub -t <topic-name> <message.payload>
+ipfs pubsub sub <topic-name>
+
+
+# publishing
+
+> ipfs pubsub pub <topic-name> <message.payload>
+> ipfs pubsub pub --stdin --enc=ndpayload <topic-name>
+<message.payload>
+<message.payload>
+<message.payload>
+
+> ipfs pubsub pub --stdin --enc=lenpayload <topic-name>
+<varint-len><message.payload><varint-len><message.payload>
 
 
 # subscribing
@@ -23,14 +35,3 @@ ipfs pubsub pub -t <topic-name> <message.payload>
 
 > ipfs pubsub sub --enc=protobuf-stream <topic-name>
 <varint-len><message-in-protobuf><varint-len><message-in-protobuf>...
-
-# publishing
-
-> ipfs pubsub pub <topic-name> <message.payload>
-> ipfs pubsub pub --stdin --enc=ndpayload <topic-name>
-<message.payload>
-<message.payload>
-<message.payload>
-
-> ipfs pubsub pub --stdin --enc=lenpayload <topic-name>
-<varint-len><message.payload><varint-len><message.payload>
