@@ -6,7 +6,7 @@ message RPC {
 	
 	message SubOpts {
 		optional bool subscribe = 1; // subscribe or unsubcribe
-		optional string topicid = 2;
+		optional string topicCID = 2;
 	}
 }
 
