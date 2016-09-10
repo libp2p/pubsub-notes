@@ -17,7 +17,7 @@ message Message {
 	repeated string topicCIDs = 4; // CID of topic descriptor object
 }
 
-// topicCID = cid(merkledag_object(topicDescriptor)); (not the topic.name)
+// topicCID = cid(merkledag_protobuf(topicDescriptor)); (not the topic.name)
 message TopicDescriptor {
 	optional string name = 1;
 	optional AuthOpts auth = 2;
