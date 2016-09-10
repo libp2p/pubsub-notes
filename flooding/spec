@@ -8,7 +8,7 @@ flood-pubsub:
     - wot: a web of trust, like key, but publishers can add other publishers by signing a certificate
   - encryption modes:
     - none: not encrypted
-    - shared key: hash of the key is on topic message. messages are encrypted with the shared key.
+    - shared key: hash of the key is on topic object. messages are encrypted with the shared key.
   - the "topic id" is the hash of the topic object
 - use topic subscriptions
   - the "topic id" is the hash of the topic object
