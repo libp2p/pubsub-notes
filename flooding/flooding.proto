@@ -2,7 +2,7 @@ package floodsub.pb;
 
 message RPC {
 	repeated SubOpts subscriptions = 1;
-	repeated Message publish = 2;
+	repeated Message msg = 2;
 	
 	message SubOpts {
 		optional bool subscribe = 1; // subscribe or unsubcribe
