@@ -1,7 +1,7 @@
 flood-pubsub:
 - keep a peerset, like bitswap
 - use a topic object
-  - name: a string name (can be some randomness, uuid4 is fine)
+  - name: a string name (or can be some randomness, uuid4 is fine)
   - authentication modes:
     - any: anyone can publish
     - key: a list of keys to trust, only messages signed by those keys are accepted
