@@ -38,6 +38,14 @@ flood-pubsub:
     - get subscription object
     - send/recv messages on that
     - could set a handler function too
+pubsub topic + peer discovery:
+- floodsub uses dht for discovery 
+  - providers on a TopicDescriptor object
+- floodsub add RPC "get peers" returns PeerInfos (a discovery protocol)
+- floodsub considers peers who publish messages
+- dont connect to ALL found peers, only consider them
+  - we should look at keeping a max number of peers per topic
+  - if max: we should look at topology forming to avoid partitions
 
 libp2p pubsub:
 - it's a pubsub
